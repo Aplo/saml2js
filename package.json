@@ -19,8 +19,8 @@
     "url": "https://github.com/Aplo/saml2js/issues"
   },
   "dependencies": {
-    "lodash": "^4.17.11",
-    "xmldom": "^0.4.0",
+    "@xmldom/xmldom": "^0.8.8",
+    "lodash": "^4.17.21",
     "xpath": "^0.0.32"
   },
   "homepage": "https://github.com/Aplo/saml2js",
@@ -31,10 +31,10 @@
     "grunt-contrib-watch": "^1.1.0",
     "jshint-stylish": "^2.0.1",
     "load-grunt-tasks": "^5.1.0",
-    "mocha": "^8.2.1",
+    "mocha": "^10.2.0",
     "time-grunt": "^2.0.0"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha.js"
   }
 }

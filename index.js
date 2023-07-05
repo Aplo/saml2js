@@ -4,14 +4,14 @@
 // into a POJO (Plain Old JavaScript Object)
 
 // Require dependencies
-var xmldom    = require('xmldom'),
+var xmldom    = require('@xmldom/xmldom'),
     xpath     = require('xpath'),
     _         = require('lodash');
 
 // Saml2js
 // -------
 // Constructor function. Saves a copy
-// of the raw SAML you pass to it and 
+// of the raw SAML you pass to it and
 // a copy that's parsed into a JS object.
 //
 // `response` [String] - A SAML response string
@@ -31,7 +31,7 @@ Saml2js.prototype.parse = function(saml) {
 
   var attributes = xpath.select('//*[local-name() = "AttributeStatement"]/*', doc);
   attributes.forEach(function(attribute){
-    var name = xpath.select('string(@Name)', attribute);    
+    var name = xpath.select('string(@Name)', attribute);
     profile[_.camelCase(name)] = xpath.select('string(*[local-name() = "AttributeValue"]/text())', attribute);
   });
 
